@@ -1,0 +1,152 @@
+:root{
+  font-size: 10px;
+}
+
+:focus {
+  outline: 0;
+}
+
+@import 'https://fonts.googleapis.com/css?family=Reenie+Beanie';
+//use - font-family: 'Reenie Beanie', cursive;
+
+*{
+  transition: all ease .2;
+}
+
+.reenie{
+  font-family: 'Reenie Beanie', cursive;
+}
+
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body{
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-weight: normal;
+}
+
+h2{
+  font-size: 1.4rem;
+}
+
+.hero{
+  background: #000;
+  background-image:
+    linear-gradient(
+      rgba(0,0,0,.0) 70%,
+      rgba(0,0,0,.7)
+    ),
+    url(../img/lion_small.jpg);
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.container{
+  width: 60%;
+  margin: 0 auto;
+  font-size: 1.8rem;
+  padding: 40px 0;
+}
+
+.warning{
+  background-color: #DBC7AF;
+  text-align: center;
+  position: relative;
+  padding: 10px;
+  font-size: 1.8rem;
+  p{
+    margin: 0 0 5px 0;
+  }
+  a{
+    text-decoration:  none;
+    color: #666;
+    background: rgba(255,255,255,.2);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    &:hover{
+      background: rgba(255,255,255,.7);
+    }
+  }
+  i{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: rgba(200, 0, 0, .6);
+    cursor: pointer;
+  }
+}
+
+a.title{
+  position: absolute;
+  right: 20%;
+  bottom: 10px;
+  text-align: center;
+  color: rgba(255, 255, 255, .4);
+  text-decoration: none;
+  p{
+    @extend .reenie;
+    font-size: 8rem;
+    margin: 0;
+  }
+  i{
+    font-size: 5rem;
+    margin-top: -20px;
+  }
+  &:hover{
+    color: rgba(255, 255, 255, .5);
+  }
+}
+
+.lightmode{
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.darkmode{
+  background-color: #333;
+  color: #f9f9f9;
+}
+
+.sepiamode{
+  background-color: #f2d5b8;
+  color: #333;
+}
+
+.controls{
+  padding: 10px;
+  .color{
+    float: right;
+  }
+  button{
+    font-family: serif;
+    font-size: 1.4rem;
+    padding: 3px 15px;
+    border: 0;
+    border-radius: 3px;
+    margin-right: 5px;
+  }
+  .light{
+    background: #fff;
+    color: #333;
+  }
+  .dark{
+    background: #000;
+    color: #f1f1f1;
+  }
+  .sepia{
+    background: #eec8a2;
+    color: #333;
+  }
+}

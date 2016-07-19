@@ -21,12 +21,3 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', ['sass', 'watch']);
-
-// Static server
-gulp.task('browser-sync', function() {
-  browserSync.init({
-    server: {
-      baseDir: "./"
-    }
-  });
-});
