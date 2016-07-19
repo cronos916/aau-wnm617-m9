@@ -12,10 +12,11 @@
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
+    "gulp-util": "^3.0.7",
     "gulp-watch": "^4.3.8"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "description": ""
 }
