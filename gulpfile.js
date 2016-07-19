@@ -4,7 +4,8 @@ var gulp = require('gulp'),
     watch = require('gulp-watch'),
     plumber = require('gulp-plumber'),
     rename = require('gulp-rename'),
-    gutil = require('gulp-util');
+    gutil = require('gulp-util'),
+    browserSync = require('browser-sync').create();
 
 gulp.task('sass', function () {
   gulp.src('css/main.scss')
@@ -21,3 +22,11 @@ gulp.task('watch', function () {
 
 gulp.task('default', ['sass', 'watch']);
 
+// Static server
+gulp.task('browser-sync', function() {
+  browserSync.init({
+    server: {
+      baseDir: "./"
+    }
+  });
+});
