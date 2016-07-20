@@ -7,6 +7,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="js/vendor/jquery-ui-1.12.0.custom/jquery-ui.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -17,13 +18,14 @@
   </head>
   <body>
     <div class="hero">
-      <a class="title animated fadeIn" href="#content">
+      <a class="title animated fadeInDown" href="#content">
         <p>plush</p>
         <i class="fa fa-angle-down" aria-hidden="true"></i>
       </a>
     </div>
     <div id="content" class="darkmode">
       <div class="controls">
+        <button id="opener">Rated PG. Why?</button>
         <div class="color">
           <button class="light">A</button>
           <button class="dark">A</button>
@@ -32,12 +34,12 @@
       </div>
       <div class="container">
         <h1>plush</h1>
-        <div class="warning">
+        <!--<div class="warning">
           <p>Plush is a frightening story for children and is rated PG.</p>
           <p>This story contains material that parents may find unsuitable for younger children. Many parents may want to read it with their younger children. The theme itself may call for parental guidance and/or the story may contain one or more of the following: graphic violence (V), and death (D).</p>
           <a href="http://www.scaryforkids.com/plush-lion/" target="_blank">via scaryforkids.com</a>
           <i class="dismiss fa fa-times-circle" aria-hidden="true"></i>
-        </div>
+        </div>-->
         <p>A young girl was about to turn 6 years old and her parents asked her what she would like for her birthday. She told them she wanted a lion. A few days later, when she opened her birthday presents, she found a brown and yellow stuffed lion with soft, plush fur. It had a friendly smile on its face and long white whiskers. </p>
         <p>The girl was delighted and, for the rest of the evening, she and her plush lion toy could not be separated. That night, when she went to bed, she placed the lion beside her pillow. As her mother was tucking her in, the girl said, &#8220;The lion will guard me while I sleep.&#8221;</p>
         <p>The next morning, the she took the plush lion to school with her. The girl&#8217;s parents had packed a lunch for her, so at break time, she sat in the school yard and ate her food. She even tried to feed some of her porridge to the plush lion, but it only dried on his face and made his smile seem like a frown. </p>
@@ -57,13 +59,18 @@
         <p>Even though he was afraid, the father ran up the stairs and threw open the door of his daughter&#8217;s bedroom. He gasped. The entire room, floor, ceiling and walls, were spattered with blood. His wife came running up the stairs and burst into the room. On the bed lay the remains of their beloved daughter. She had been torn apart and most of her insides had been eaten. Only her face remained untouched.</p>
         <p>In the middle of the gnawed bones and chewed flesh, sat the plush lion. Its fur was soaked in blood. Its button eyes stared blankly at the horrified parents.</p>
       </div>
+      <div id="dialog">
+        <p>This story contains material that parents may find unsuitable for younger children. Many parents may want to read it with their younger children. The theme itself may call for parental guidance and/or the story may contain one or more of the following: graphic violence (V), and death (D).</p>
+        <i class="dismiss fa fa-times-circle" aria-hidden="true"></i>
+      </div>
     </div>
     <footer>
       <p>only her face remained untouched</p>
     </footer>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="js/vendor/jquery-ui-1.12.0.custom/jquery-ui.min.js"></script>
+    <script src="js/vendor/jquery.ui.touch-punch.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

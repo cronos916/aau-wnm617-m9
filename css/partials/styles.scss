@@ -108,7 +108,7 @@ a.title{
   color: rgba(255, 255, 255, .4);
   text-decoration: none;
   transition: all .2s ease;
-  animation-delay: 1.5s;
+  animation-delay: 1s;
   @media #{$sm}{
     right: 15%;
     bottom: 20px;
@@ -152,6 +152,7 @@ a.title{
   }
 }
 
+/*
 .warning{
   position: relative;
   padding: 20px;
@@ -178,6 +179,15 @@ a.title{
     right: 10px;
     color: rgba(200, 0, 0, .6);
     cursor: pointer;
+  }
+}
+*/
+
+#opener{
+  background-color: #eec8a2;
+  color: #333;
+  &:hover{
+    background-color: darken(#eec8a2, 10%);
   }
 }
 
@@ -212,14 +222,23 @@ a.title{
   .light{
     background: #fff;
     color: #333;
+    &:hover{
+      background: #ccc;
+    }
   }
   .dark{
     background: #000;
     color: #f1f1f1;
+    &:hover{
+      background: #555;
+    }
   }
   .sepia{
     background: #eec8a2;
     color: #333;
+    &:hover{
+      background: darken(#eec8a2, 10%);
+    }
   }
 }
 
@@ -237,4 +256,36 @@ footer{
       font-size: 3.6rem;
     }
   }
+}
+
+// jQuery UI theme
+.alert{
+  position: relative;
+  padding: 20px;
+  background: #eec8a2;
+  border-radius: 5px;
+  color: #333;
+  font-size: 1.6rem;
+  margin: 10px;
+  i{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: rgba(200, 0, 0, 1);
+    cursor: pointer;
+  }
+}
+
+.ui-widget-overlay {
+  opacity: 0.8;
+  filter: Alpha(Opacity=50);
+  background-color: black;
+}
+
+.ui-dialog-titlebar{
+  display: none;
+}
+
+.ui-widget.ui-widget-content{
+  border: 0;
 }

@@ -105,7 +105,7 @@ a.title {
   color: rgba(255, 255, 255, 0.4);
   text-decoration: none;
   transition: all .2s ease;
-  animation-delay: 1.5s; }
+  animation-delay: 1s; }
   @media screen and (min-width: 500px) {
     a.title {
       right: 15%;
@@ -143,29 +143,41 @@ a.title {
     .container {
       width: 60%; } }
 
-.warning {
+/*
+.warning{
   position: relative;
   padding: 20px;
   background: #eec8a2;
   border-radius: 5px;
-  color: #333; }
-  .warning p {
-    margin: 0 0 20px 0; }
-  .warning a {
-    text-decoration: none;
+  color: #333;
+  p{
+    margin: 0 0 20px 0;
+  }
+  a{
+    text-decoration:  none;
     color: #666;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255,255,255,.2);
     padding: 5px 10px;
     border-radius: 2px;
-    font-size: 1.4rem; }
-    .warning a:hover {
-      background: rgba(255, 255, 255, 0.5); }
-  .warning i {
+    font-size: 1.4rem;
+    &:hover{
+      background: rgba(255,255,255,.5);
+    }
+  }
+  i{
     position: absolute;
     top: 10px;
     right: 10px;
-    color: rgba(200, 0, 0, 0.6);
-    cursor: pointer; }
+    color: rgba(200, 0, 0, .6);
+    cursor: pointer;
+  }
+}
+*/
+#opener {
+  background-color: #eec8a2;
+  color: #333; }
+  #opener:hover {
+    background-color: #e6af77; }
 
 .lightmode {
   background-color: #f9f9f9;
@@ -193,12 +205,18 @@ a.title {
   .controls .light {
     background: #fff;
     color: #333; }
+    .controls .light:hover {
+      background: #ccc; }
   .controls .dark {
     background: #000;
     color: #f1f1f1; }
+    .controls .dark:hover {
+      background: #555; }
   .controls .sepia {
     background: #eec8a2;
     color: #333; }
+    .controls .sepia:hover {
+      background: #e6af77; }
 
 footer {
   height: 80px;
@@ -212,6 +230,32 @@ footer {
     @media screen and (min-width: 500px) {
       footer p {
         font-size: 3.6rem; } }
+
+.alert {
+  position: relative;
+  padding: 20px;
+  background: #eec8a2;
+  border-radius: 5px;
+  color: #333;
+  font-size: 1.6rem;
+  margin: 10px; }
+  .alert i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #c80000;
+    cursor: pointer; }
+
+.ui-widget-overlay {
+  opacity: 0.8;
+  filter: Alpha(Opacity=50);
+  background-color: black; }
+
+.ui-dialog-titlebar {
+  display: none; }
+
+.ui-widget.ui-widget-content {
+  border: 0; }
 
 /* ==========================================================================
 Media Queries
