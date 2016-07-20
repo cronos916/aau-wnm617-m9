@@ -49,17 +49,21 @@ textarea {
 :focus {
   outline: 0; }
 
-* {
-  transition: all ease .2; }
-
-.reenie, a.title p {
+.reenie, a.title p, footer {
   font-family: 'Reenie Beanie', cursive; }
 
+/*
+@media screen and (min-width: 500px){ }
+@media screen and (min-width: 740px){ }
+@media screen and (min-width: 980px){ }
+@media screen and (min-width: 1220px){ }
+*/
 body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+  background: #222; }
 
 html, body {
   margin: 0;
@@ -77,54 +81,90 @@ h2 {
   width: 100vw;
   height: 100vh;
   background-size: cover;
-  background-position: center;
+  background-position: 70%;
   position: relative; }
+  @media screen and (min-width: 500px) {
+    .hero {
+      background-image: linear-gradient(transparent 70%, rgba(0, 0, 0, 0.7)), url(../img/lion_med.jpg);
+      background-position: center; } }
+  @media screen and (min-width: 740px) {
+    .hero {
+      background-image: linear-gradient(transparent 70%, rgba(0, 0, 0, 0.7)), url(../img/lion_lg.jpg); } }
+  @media screen and (min-width: 980px) {
+    .hero {
+      background-image: linear-gradient(transparent 70%, rgba(0, 0, 0, 0.7)), url(../img/lion_xlg.jpg); } }
+  @media screen and (min-width: 1220px) {
+    .hero {
+      background-image: linear-gradient(transparent 70%, rgba(0, 0, 0, 0.7)), url(../img/lion.jpg); } }
+
+a.title {
+  position: absolute;
+  right: 15%;
+  bottom: 70px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+  transition: all .2s ease; }
+  @media screen and (min-width: 500px) {
+    a.title {
+      right: 15%;
+      bottom: 20px; } }
+  a.title p {
+    font-size: 6rem;
+    margin: 0; }
+    @media screen and (min-width: 500px) {
+      a.title p {
+        font-size: 8rem; } }
+  a.title i {
+    font-size: 3rem;
+    margin-top: -25px; }
+    @media screen and (min-width: 500px) {
+      a.title i {
+        font-size: 5rem;
+        margin-top: -35px; } }
+  a.title:hover {
+    color: rgba(255, 255, 255, 0.5); }
+    @media screen and (min-width: 500px) {
+      a.title:hover {
+        right: 15%;
+        bottom: 10px; } }
 
 .container {
-  width: 60%;
+  width: 80%;
+  max-width: 900px;
   margin: 0 auto;
   font-size: 1.8rem;
   padding: 40px 0; }
+  @media screen and (min-width: 500px) {
+    .container {
+      width: 70%; } }
+  @media screen and (min-width: 740px) {
+    .container {
+      width: 60%; } }
 
 .warning {
-  background-color: #DBC7AF;
-  text-align: center;
   position: relative;
-  padding: 10px;
-  font-size: 1.8rem; }
+  padding: 20px;
+  background: #eec8a2;
+  border-radius: 5px;
+  color: #333; }
   .warning p {
-    margin: 0 0 5px 0; }
+    margin: 0 0 20px 0; }
   .warning a {
     text-decoration: none;
     color: #666;
     background: rgba(255, 255, 255, 0.2);
     padding: 5px 10px;
-    border-radius: 5px;
+    border-radius: 2px;
     font-size: 1.4rem; }
     .warning a:hover {
-      background: rgba(255, 255, 255, 0.7); }
+      background: rgba(255, 255, 255, 0.5); }
   .warning i {
     position: absolute;
     top: 10px;
     right: 10px;
     color: rgba(200, 0, 0, 0.6);
     cursor: pointer; }
-
-a.title {
-  position: absolute;
-  right: 20%;
-  bottom: 10px;
-  text-align: center;
-  color: rgba(255, 255, 255, 0.4);
-  text-decoration: none; }
-  a.title p {
-    font-size: 8rem;
-    margin: 0; }
-  a.title i {
-    font-size: 5rem;
-    margin-top: -20px; }
-  a.title:hover {
-    color: rgba(255, 255, 255, 0.5); }
 
 .lightmode {
   background-color: #f9f9f9;
@@ -158,6 +198,19 @@ a.title {
   .controls .sepia {
     background: #eec8a2;
     color: #333; }
+
+footer {
+  height: 80px;
+  line-height: 80px;
+  background: #222;
+  text-align: center; }
+  footer p {
+    margin: 0;
+    color: #f9f9f9;
+    font-size: 2.6rem; }
+    @media screen and (min-width: 500px) {
+      footer p {
+        font-size: 3.6rem; } }
 
 /* ==========================================================================
 Media Queries

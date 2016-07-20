@@ -1,3 +1,5 @@
+
+// Global styles
 :root{
   font-size: 10px;
 }
@@ -6,22 +8,40 @@
   outline: 0;
 }
 
+*{
+  //transition: all .2s ease;
+}
+
+// Font styles
+
 @import 'https://fonts.googleapis.com/css?family=Reenie+Beanie';
 //use - font-family: 'Reenie Beanie', cursive;
-
-*{
-  transition: all ease .2;
-}
 
 .reenie{
   font-family: 'Reenie Beanie', cursive;
 }
 
+// media queries
+$sm: "screen and (min-width: 500px)";
+$md: "screen and (min-width: 740px)";
+$lg: "screen and (min-width: 980px)";
+$xl: "screen and (min-width: 1220px)";
+
+//usage
+/*
+@media #{$sm}{ }
+@media #{$md}{ }
+@media #{$lg}{ }
+@media #{$xl}{ }
+*/
+
+// base styles
 body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #222;
 }
 
 html, body{
@@ -37,6 +57,7 @@ h2{
   font-size: 1.4rem;
 }
 
+// Site styles
 .hero{
   background: #000;
   background-image:
@@ -48,35 +69,112 @@ h2{
   width: 100vw;
   height: 100vh;
   background-size: cover;
-  background-position: center;
+  background-position: 70%;
   position: relative;
+  @media #{$sm}{
+    background-image:
+      linear-gradient(
+        rgba(0,0,0,.0) 70%,
+        rgba(0,0,0,.7)
+      ),
+      url(../img/lion_med.jpg);
+    background-position: center;
+  }
+  @media #{$md}{
+    background-image:
+      linear-gradient(
+        rgba(0,0,0,.0) 70%,
+        rgba(0,0,0,.7)
+      ),
+      url(../img/lion_lg.jpg);
+  }
+  @media #{$lg}{
+    background-image:
+      linear-gradient(
+        rgba(0,0,0,.0) 70%,
+        rgba(0,0,0,.7)
+      ),
+      url(../img/lion_xlg.jpg);
+  }
+  @media #{$xl}{
+    background-image:
+      linear-gradient(
+        rgba(0,0,0,.0) 70%,
+        rgba(0,0,0,.7)
+      ),
+      url(../img/lion.jpg);
+  }
+}
+
+a.title{
+  position: absolute;
+  right: 15%;
+  bottom: 70px;
+  text-align: center;
+  color: rgba(255, 255, 255, .4);
+  text-decoration: none;
+  transition: all .2s ease;
+  @media #{$sm}{
+    right: 15%;
+    bottom: 20px;
+  }
+  p{
+    @extend .reenie;
+    font-size: 6rem;
+    margin: 0;
+    @media #{$sm}{
+      font-size: 8rem;
+    }
+  }
+  i{
+    font-size: 3rem;
+    margin-top: -25px;
+    @media #{$sm}{
+      font-size: 5rem;
+      margin-top: -35px;
+    }
+  }
+  &:hover{
+    color: rgba(255, 255, 255, .5);
+    @media #{$sm}{
+      right: 15%;
+      bottom: 10px;
+    }
+  }
 }
 
 .container{
-  width: 60%;
+  width: 80%;
+  max-width: 900px;
   margin: 0 auto;
   font-size: 1.8rem;
   padding: 40px 0;
+  @media #{$sm}{
+    width: 70%;
+  }
+  @media #{$md}{
+    width: 60%;
+  }
 }
 
 .warning{
-  background-color: #DBC7AF;
-  text-align: center;
   position: relative;
-  padding: 10px;
-  font-size: 1.8rem;
+  padding: 20px;
+  background: #eec8a2;
+  border-radius: 5px;
+  color: #333;
   p{
-    margin: 0 0 5px 0;
+    margin: 0 0 20px 0;
   }
   a{
     text-decoration:  none;
     color: #666;
     background: rgba(255,255,255,.2);
     padding: 5px 10px;
-    border-radius: 5px;
+    border-radius: 2px;
     font-size: 1.4rem;
     &:hover{
-      background: rgba(255,255,255,.7);
+      background: rgba(255,255,255,.5);
     }
   }
   i{
@@ -85,27 +183,6 @@ h2{
     right: 10px;
     color: rgba(200, 0, 0, .6);
     cursor: pointer;
-  }
-}
-
-a.title{
-  position: absolute;
-  right: 20%;
-  bottom: 10px;
-  text-align: center;
-  color: rgba(255, 255, 255, .4);
-  text-decoration: none;
-  p{
-    @extend .reenie;
-    font-size: 8rem;
-    margin: 0;
-  }
-  i{
-    font-size: 5rem;
-    margin-top: -20px;
-  }
-  &:hover{
-    color: rgba(255, 255, 255, .5);
   }
 }
 
@@ -148,5 +225,21 @@ a.title{
   .sepia{
     background: #eec8a2;
     color: #333;
+  }
+}
+
+footer{
+  height: 80px;
+  line-height: 80px;
+  background: #222;
+  text-align: center;
+  @extend .reenie;
+  p{
+    margin: 0;
+    color: #f9f9f9;
+    font-size: 2.6rem;
+    @media #{$sm}{
+      font-size: 3.6rem;
+    }
   }
 }
