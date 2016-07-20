@@ -104,7 +104,8 @@ a.title {
   text-align: center;
   color: rgba(255, 255, 255, 0.4);
   text-decoration: none;
-  transition: all .2s ease; }
+  transition: all .2s ease;
+  animation-delay: 1.5s; }
   @media screen and (min-width: 500px) {
     a.title {
       right: 15%;
